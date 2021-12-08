@@ -12,8 +12,8 @@ export class Circle implements Shape {
     this.type = Type.CIRCLE;
     this.radius = radius;
   }
-  
-  pointWithinCircle(point: Point, circle: Circle): boolean{
+
+  pointWithinCircle(point: Point, circle: Circle): boolean {
     const distance = Math.sqrt(
       Math.pow(point.x - circle.center.x, 2) + Math.pow(point.y - circle.center.y, 2),
     );
@@ -51,7 +51,7 @@ export class Circle implements Shape {
 
         return circleToRectDistance <= Math.pow(this.radius, 2);
       case Type.LINE:
-        const line : Line = Line.fromShape(other);
+        const line: Line = Line.fromShape(other);
         return line.collides(this)
       default:
         throw new Error(`Invalid shape type!`);

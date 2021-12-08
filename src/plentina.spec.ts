@@ -20,7 +20,7 @@ describe('PlentinaController', () => {
 
   describe('root', () => {
     it('should return "Hello World!"', () => {
-      expect(plentinaController.healthCheck()).toStrictEqual({"name": "Sumit Kumar Jha"});
+      expect(plentinaController.healthCheck()).toStrictEqual({ "name": "Sumit Kumar Jha" });
     });
   });
 });
@@ -136,7 +136,7 @@ describe('PlentinaService', () => {
       const line5 = new Line(1, 1, 10, 1);
       const line6 = new Line(1, 2, 10, 2);
       const line7 = new Line(-5, -5, 0, 0);
-      const line8 = new Line(1, 1 , 10, 10);
+      const line8 = new Line(1, 1, 10, 10);
       const line11 = new Line(0, 4, 0, 11);
       it('should return false', () => {
         expect(line.collides(line1)).toBeFalsy;
