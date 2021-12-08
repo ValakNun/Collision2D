@@ -1,4 +1,4 @@
 # MaroonGoldGoldenRetriever
-npm install (Installs node packages)
-npm start
-npm test (to run all test cases)
+npm install (Installs node packages) <br />
+npm start <br />
+npm test (to run all test cases) <br />
