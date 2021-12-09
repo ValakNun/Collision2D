@@ -87,15 +87,10 @@ export class Line implements Shape {
         var c2 = w1 * (z2 - z1) + z1 * (w1 - w2);
         /* Determining Determinant for Cramer's rule */
         var det = a1 * b2 - b1 * a2;
-        /* If lines are parallel and along same direction, check whether endpoints of one lie on other */
+        /* If lines are parallel, check overlap */
         if (det == 0) {
-          if (c1 == c2) {
-            if (this.pointBetweenPoints(this.center, line2.center, line2.otherEnd) || this.pointBetweenPoints(this.otherEnd, line2.center, line2.otherEnd)) {
-              return true;
-            }
-            else {
-              return false;
-            }
+          if (this.pointBetweenPoints(this.center, line2.center, line2.otherEnd) || this.pointBetweenPoints(this.otherEnd, line2.center, line2.otherEnd)) {
+            return true;
           }
           else {
             return false;
